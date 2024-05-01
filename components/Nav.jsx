@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 const navList = [
   { name: "Home", path: "/" },
   { name: "Jobs", path: "/jobs" },
-  { name: "Categories", path: "/categories" },
+  { name: "Companies", path: "/companies" },
 ];
 
 const Nav = ({ providers }) => {
@@ -20,9 +20,13 @@ const Nav = ({ providers }) => {
 
   return (
     <header>
-      <nav className="flex justify-between px-5 py-3  lg:px-12">
+      <nav className="flex justify-between px-5 py-3 lg:px-12">
         <div>
-          <p className="font-extrabold italic text-xl lg:text-2xl">DEEPDIVE</p>
+          <Link href={"/"}>
+            <p className="font-extrabold italic text-xl lg:text-2xl">
+              DEEPDIVE
+            </p>
+          </Link>
         </div>
 
         {/* Mobile Nav */}
@@ -119,7 +123,7 @@ const Nav = ({ providers }) => {
         {session?.user ? (
           <div className="lg:flex hidden">
             <button
-              className="text-white-100 text-lg bg-primary px-4 py-1.5 cursor-pointer rounded-md hover:opacity-90"
+              className="text-white-100 text-md font-medium bg-primary px-4 py-1.5 cursor-pointer rounded-md hover:opacity-90"
               onClick={() => signOut()}
             >
               Log Out
@@ -134,7 +138,7 @@ const Nav = ({ providers }) => {
                     type="button"
                     key={provider.name}
                     onClick={() => signIn(provider.id)}
-                    className="text-white-100 text-md font-medium cursor-pointer bg-primary px-4 py-1.5 rounded-md hover:opacity-90"
+                    className="text-white-100 text-md font-medium bg-primary px-4 py-1.5 rounded-md hover:opacity-90"
                   >
                     Sign In
                   </button>

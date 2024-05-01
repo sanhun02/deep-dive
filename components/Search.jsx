@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Search = () => {
   return (
-    <div className="relative w-full lg:w-11/12 h-[5rem] lg:h-[5.5rem] rounded-lg z-0 overflow-hidden">
-      <div className="absolute w-full h-full bg-white-100 opacity-30"></div>
+    <div className="relative w-full lg:w-11/12 h-[5rem] lg:h-[5.5rem] rounded-lg z-0 overflow-hidden mt-24">
+      <div className="absolute w-full h-full bg-white-100 opacity-20"></div>
 
       {/* Mobile Search */}
       <div className="md:hidden">
@@ -44,7 +44,7 @@ const Search = () => {
             <input
               type="text"
               placeholder="Enter a job title or keyword"
-              className="w-full h-14 md:h-[3.75] rounded-md pl-12 placeholder-black placeholder-opacity-60 focus:outline-secondary text-black text-lg"
+              className="w-full h-14 md:h-[3.75] rounded-md pl-12 placeholder-black placeholder-opacity-60 bg-white-100 focus:outline-secondary text-black text-lg"
             />
 
             <button type="button" className="bg-black hover:bg-opacity-80 hover:cursor-pointer px-5 py-2 rounded-lg text-lg font-medium">Search</button>

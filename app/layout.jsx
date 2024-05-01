@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import Provider from "@/components/Provider";
 import Nav from "@/components/Nav";
-// import { useState, useEffect } from "react";
 import { getProviders } from "next-auth/react";
 
 export const metadata = {
